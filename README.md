@@ -1,16 +1,17 @@
 # REST API - Spring Boot + JPA
 
-API REST desenvolvida em Java com Spring Boot, utilizando Spring Data JPA, Hibernate e MySQL para persistência de dados.
+API REST desenvolvida em Java com Spring Boot, utilizando Spring Data JPA, Hibernate e H2 para persistência de dados.
 
 O projeto foi desenvolvido com foco na prática de desenvolvimento de APIs REST, arquitetura em camadas, persistência de dados e organização de aplicações backend.
 
 ## 🚀 Tecnologias
 
-- Java
-- Spring Boot
+- Java 17
+- Spring Boot 3.5.5
+- Spring Web
 - Spring Data JPA
 - Hibernate
-- MySQL
+- H2 Database
 - Maven
 
 ## 📚 Conceitos praticados
@@ -19,30 +20,35 @@ O projeto foi desenvolvido com foco na prática de desenvolvimento de APIs REST,
 - Arquitetura em camadas
 - Persistência de dados com JPA/Hibernate
 - Operações CRUD
-- Relacionamento entre entidades
+- Relacionamentos entre entidades
 - Tratamento de exceções
-- Validação e organização das requisições
 - Separação de responsabilidades
+- Modelagem de entidades
+- Consultas e persistência utilizando Spring Data JPA
 
 ## 🏗️ Estrutura do projeto
 
-O projeto segue uma arquitetura em camadas, separando as principais responsabilidades da aplicação:
+O projeto utiliza uma organização em camadas, separando as principais responsabilidades da aplicação:
 
-- **Controller** — gerenciamento das requisições HTTP
-- **Service** — regras e lógica da aplicação
-- **Repository** — acesso aos dados utilizando Spring Data JPA
-- **Entity** — representação das entidades persistidas no banco de dados
-- **DTO** — transferência de dados entre as camadas da aplicação
+- **Config** — configurações da aplicação e carga inicial de dados
+- **Entities** — representação das entidades do domínio
+- **Repositories** — acesso e persistência dos dados utilizando Spring Data JPA
+- **Services** — implementação das regras e lógica da aplicação
+- **Resources** — configuração e recursos da aplicação
 
-## ⚙️ Como executar
+## 🗄️ Banco de dados
 
-### Pré-requisitos
+O projeto utiliza o **H2 Database** em memória para persistência dos dados durante a execução da aplicação.
 
-- Java 17 ou superior
-- MySQL
-- Maven
+Configurações principais:
 
-### 1. Clone o repositório
+- Banco: `testdb`
+- URL: `jdbc:h2:mem:testdb`
+- Usuário: `sa`
+- Porta da aplicação: `8081`
+- Console H2 habilitado
 
-```bash
-git clone https://github.com/guisbezerra/springboot-rest-api-jpa.git
+O console do H2 pode ser acessado em:
+
+```text
+http://localhost:8081/h2-console
