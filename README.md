@@ -34,7 +34,7 @@ O projeto utiliza uma organização em camadas, separando as principais responsa
 - **Entities** — representação das entidades do domínio
 - **Repositories** — acesso e persistência dos dados utilizando Spring Data JPA
 - **Services** — implementação das regras e lógica da aplicação
-- **Resources** — configuração e recursos da aplicação
+- **Resources** — arquivos de configuração e recursos da aplicação
 
 ## 🗄️ Banco de dados
 
